@@ -143,16 +143,7 @@
  <li class="nav-item">
         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
-<!--
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Remote MCU lib</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown08">
-          <a class="dropdown-item" href="/remote-mcu-library/">Remote MCU library</a>
-          <a class="dropdown-item" href="/benefits">Benefits of library</a>
-          <a class="dropdown-item" href="/license">License</a>
-        </div>
-      </li>
-      -->
+
         <li class="nav-item">
             <a class="nav-link" href="benefits.html">Benefits</a>
         </li>
@@ -205,16 +196,6 @@
  <li class="nav-item">
         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
-<!--
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Remote MCU lib</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown08">
-          <a class="dropdown-item" href="/remote-mcu-library/">Remote MCU library</a>
-          <a class="dropdown-item" href="/benefits">Benefits of library</a>
-          <a class="dropdown-item" href="/license">License</a>
-        </div>
-      </li>
-      -->
         <li class="nav-item">
             <a class="nav-link" href="benefits.html">Benefits</a>
         </li>
@@ -249,11 +230,6 @@
 
 <!-- Carousel start -->
  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!--  <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol> -->
     <div class="carousel-inner">
 
       <div class="carousel-item">
@@ -394,98 +370,6 @@ Let's have a look at the video below and see what opportunities and applications
 </div> 
 
     </div>
-
-
-<p>
-
- <h5 class="display-5" style="color: black; text-align: left;" >Check your MCU chip:</h5>
- <form action="download.html" method="post" id="archform">
-  <div class="row">
-    <div class="w-80">
-      <input name="arch" type="text" class="form-control mb-2" id="archPicker" placeholder="Type MCU name here..."  autocomplete="off">
-    </div>
-
-    <div id="go">
-      <button class="btn btn-primary mb-2" id="gobutton">Go</button>
-    </div>
-
-    <div class="displaynone" id="requestoffer" style="text-align: left;">
-      There are no public packages for this configuration for now. You can keep track of new available versions with any of the following:
-<br>
-<ul style="margin-top: 5px;">
-    <li><a href="https://twitter.com/RemoteMcu" target="_blank">Twitter</a></li>
-    <li><a href="https://www.facebook.com/remotemcu/" target="_blank">Facebook Page</a></li>
-    <li><a href="https://www.linkedin.com/company/remotemcu" target="_blank">Linkedin Page</a></li>
-    <li><a href="https://www.linkedin.com/company/remotemcu" target="_blank">Youtube Channel</a></li>
-</ul>
-You can <a href="index.html" onClick="showSendRequestForm(); return false;">send us a request</a> to get Extended version for this configuration.
-    </div>
-
-  </div>
-</form>
-
-<div id="sendrequest">
-<form id="sendrequestform" class="displaynone" style="margin-top: 30px;" action="https://remotemcu.com/sendrequest" method="post">
-
-    <div class="row"><h5>Request form</h5></div>
-
-    <div class="row special">
-        <div class="w-80">
-            <label>Your name:</label>
-            <input name="name" type="text" class="form-control mb-2" id="name" placeholder="">
-        </div>
-    </div>
-
-    <div class="row special">
-        <div class="w-80">
-            <label>Email:</label>
-            <input name="email" type="text" class="form-control mb-2" id="e-mail" placeholder="">
-        </div>
-    </div>
-
-    <div class="row special">
-        <div class="w-80">
-            <label>Message:</label>
-            <textarea name="desc" type="text" class="form-control mb-2" id="message" placeholder=""></textarea>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="w-80">
-            <label>Your name *</label>
-            <input name="n34skq0" type="text" class="form-control mb-2" placeholder="Name">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="w-80">
-            <label>Email *</label>
-            <input name="e4020kg" type="text" class="form-control mb-2" placeholder="your_email@company.com">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="w-80">
-            <label>Message (optional)</label>
-            <textarea name="m8492do0" type="text" class="form-control mb-2" placeholder=""></textarea>
-        </div>
-    </div>
-
-    <input type="hidden" name="t3104990" id="target" value="">
-
-    <div class="row">
-        <div id="go" class="mt-3">
-            <button  class="btn btn-primary mb-2 ml-0" id="sendrequestbutton">Send a request</button>
-        </div>
-    </div>
-
-
-
-</form>
-</div>
-
-
-  </p>
 
 
   </div>
@@ -766,199 +650,6 @@ Go to https... <a href="news/stm32f4-version-for-raspberry/index.html">[Read_Mor
 });
 </script>
 
-
-     <script src="js/fuse/fuse.min.js" type="text/javascript"></script>
-    <script src="js/fuse/fuzzycomplete.js" type="text/javascript"></script>
-
-    <script>
-        function showRequestOffer(){
-             $('#requestoffer').removeClass('displaynone');
-             $('#searched-text').text($("#archPicker").val());
-             $('#target').val($("#archPicker").val());
-        }
-
-        function showSendRequestForm(){
-            $('#sendrequestform').removeClass('displaynone');
-            $('#sendrequestform').show();
-        }
-
-        function ContainsKeyValue( obj, key, value ){
-            if( obj[key] === value ) return true;
-            for( all in obj )
-            {
-                if( obj[all] != null && obj[all][key] === value ){
-                    return true;
-                }
-                if( typeof obj[all] == "object" && obj[all]!= null ){
-                    var found = ContainsKeyValue( obj[all], key, value );
-                    if( found == true ) return true;
-                }
-            }
-            return false;
-        }
-
-        function sendQueryToServer(query, found){
-            $.ajax({
-                type: 'POST',
-                // make sure you respect the same origin policy with this url:
-                // http://en.wikipedia.org/wiki/Same_origin_policy
-                url: '/ajax/querymanager',
-                data: {
-                    'query': query,
-                    'found': found
-                },
-        //        success: function(msg){
-        //            alert('wow' + msg);
-        //        }
-            });
-        }
-
-
-        function getArchsCallback(data){
-                  var archs = data;
-
-
-                  var checkArchGo = function (e) {
-
-                  var val = $("#archPicker").val();
-
-                  if(ContainsKeyValue(archs, 'arch', val)) {
-                      // if string found in archlist, send to server and submit
-                      sendQueryToServer(val, 1);
-                      document.getElementById('archform').submit();
-                  }
-                  else {
-                      // if string not found in archlist, send to server and show request offer
-                      sendQueryToServer(val, 0);
-                      showRequestOffer();
-                  }
-
-                  return false;
-                }
-
-                window.checkArch = function (e) {
-
-                  var val = $("#archPicker").val();
-
-                  if(ContainsKeyValue(archs, 'arch', val)) {
-                      sendQueryToServer(val, 1);
-                    //  document.getElementById('archform').submit();
-                  }
-                  else {
-                      sendQueryToServer(val, 0);
-                      showRequestOffer();
-                  }
-
-                  return false;
-                }        
-
-                $("#archPicker").keydown(function(e) {
-                    if(e.which == 13 || e.which == 9) {
-                        var val0 = $("#archPicker").val()
-
-                        setTimeout(function(){
-                                var val1 = $("#archPicker").val()
-
-                                if ( val1 == '') {
-                                      var val = val0
-                                  }
-                                else {
-                                      var val = val1
-                                }
-
-
-
-                                if(ContainsKeyValue(archs, 'arch', val)) {
-                                    sendQueryToServer(val, 1);
-                                    document.getElementById('archform').submit();
-                                }
-                                else {
-                                    sendQueryToServer(val, 0);
-                                    showRequestOffer();
-                                }
-
-
-
-                            }, 500);
-
-                    }
-
-                    if(e.which == 38 || e.which == 40) {
-                        setTimeout(function(){
-                            if($("#archPicker").val() == ''){
-                                $("#archPicker").val($(".selected").text());
-                            }
-                        }, 500);
-
-                    }
-                });
-
-                document.getElementById("gobutton").onclick = checkArchGo;
-
-                var fuseOptions = { keys: ["arch", "comment"] };
-
-                var options = { display: function(result) { return "<b>" + result['arch'] + "</b> - " + result['comment']; }, displayValue: "arch",key: "arch", fuseOptions: fuseOptions, resultsLimit: 20 };
-
-                $("#archPicker").fuzzyComplete(archs, options);
-                
-        }
-
-        function hideBlock(i){
-            $('.news-container').eq(i-1).css("display", "none");
-        }
-
-        function showBlock(i){
-            $('.news-container').eq(i-1).css("display", "block");
-        }
-
-        function newsConterollerCallback(){
-            var winwidth = $(window).width();
-
-            if(winwidth < 1430){
-                hideBlock(8);
-                hideBlock(9);
-                hideBlock(10);
-                hideBlock(11);
-                hideBlock(12);
-            }
-            else if(winwidth >= 1430 && winwidth < 1750){
-                showBlock(8);
-                showBlock(9);
-                showBlock(10);
-                hideBlock(11);
-                hideBlock(12);
-            }
-            else if(winwidth >=1750 && winwidth < 2360){
-                showBlock(8);
-                showBlock(9);
-                showBlock(10);
-                hideBlock(11);
-                hideBlock(12);
-            }
-            else if(winwidth >=2360){
-                showBlock(8);
-                showBlock(9);
-                showBlock(10);
-                showBlock(11);
-                showBlock(12);
-            }
-        }
-
-        $(document).ready(function(){
-        newsConterollerCallback();
-
-        $.getJSON("/ajax/getarchs").done(getArchsCallback).fail(function(){
-            $.getJSON("/ajax/getarchs").done(getArchsCallback).fail(function(){
-                $.getJSON("/ajax/getarchs").done(getArchsCallback).fail(function(){
-                    alert( "Error server connection, please write on email support@remotemcu.com" );
-                });
-            });
-        });
-
-        $( window ).resize(newsConterollerCallback);
-
-        });
-    </script>
 
     </body>
 </html>
