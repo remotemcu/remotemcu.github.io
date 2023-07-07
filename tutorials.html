@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159666078-1"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'UA-159666078-1');
+ </script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.com/metrika/tag.js", "ym");
+ 
+    ym(59071672, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.com/watch/59071672" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+
+    <title>RemoteMCU - List of REMCU Tutorial</title>
+          <meta name="description" content="List of REMCU Tutorial" />
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="tutorials.html" />
+<script type="application/ld+json">{"@context" : "https://schema.org","@type" : "Organization","logo": "https:\/\/remotemcu.com\/images\/logo\/logo_preview.png","name" : "RemoteMCU","url" : "https:\/\/remotemcu.com\/news","sameAs" : ["https:\/\/www.facebook.com\/remotemcu\/", "https:\/\/twitter.com\/@RemoteMcu", "https:\/\/www.youtube.com\/channel\/UCyIDHcMnHFFRS-SznKUZ9ug", "https:\/\/www.linkedin.com\/company\/remotemcu"]}</script>
+<meta property="og:url" content="https://remotemcu.com/tutorials" />
+<meta property="og:site_name" content="RemoteMCU" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta property="article:author" content="https://www.facebook.com/remotemcu/" />
+<meta property="article:publisher" content="https://www.facebook.com/remotemcu/" />
+<meta property="article:section" content="Tutorial" />
+<meta property="article:tag" content="Raspberry Pi" />
+<meta property="article:tag" content="STM32" />
+<meta property="article:tag" content="Remote control" />
+<meta property="article:tag" content="Python" />
+<meta property="article:tag" content="Jupyter notebook" />
+<meta property="article:tag" content="MCU" />
+<meta property="article:tag" content="microcontroller" />
+<meta property="article:tag" content="embedded software" />
+<meta property="article:tag" content="video" />
+
+<meta property="og:title" content="REMCU Tutorials" />
+<meta property="og:description" content="List of REMCU Tutorial. Video tutorial for Raspberry, Windows, Linux and MacOS platforms" />
+
+<meta property="og:image" content="https://github.com/remculib/site/raw/master/news/mac_preview.png" />
+<meta property="og:image:secure_url" content="https://github.com/remculib/site/raw/master/news/mac_preview.png" />
+
+<meta property="fb:pages" content="100628564742383" />
+<meta name="twitter:domain" content="remotemcu.com"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@RemoteMcu" />
+<meta name="twitter:creator" content="@RemoteMcu" />
+<meta name="twitter:title" content="REMCU Tutorials" />
+<meta name="twitter:description" content="List of REMCU Tutorial. Video tutorial for Raspberry, Windows, Linux and MacOS platforms" />
+
+<meta name="twitter:image:src" content="https://github.com/remculib/site/raw/master/news/mac_preview.png" />
+        <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-favicon.png"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/product/product.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+
+       <!-- Include EnlighterJS Styles -->
+<link rel="stylesheet" type="text/css" href="css/EnlighterJS.min.css" />
+
+<!-- Include MooTools Framework -->
+<script type="text/javascript" src="js/MooTools.min.js"></script>
+<!-- Include EnlighterJS -->
+<script type="text/javascript" src="js/EnlighterJS.min.js" ></script>
+
+<meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-language="javascript" />
+
+
+<script type="text/javascript">
+  //fix conflict carousel and mootools
+window.addEvent('domready', function(){
+  if (typeof jQuery != 'undefined' && typeof MooTools != 'undefined' ) 
+  {
+    Element.implement({
+        slide: function(how, mode){
+          return this;
+      }
+    });
+  }
+ });
+</script>
+
+<style>
+/* fix conflict bootstrap dropdown item and mootools */
+.nav-item { 
+	display:block !important;
+}
+</style>
+     
+    <script src="js/cookie.notice.min.js"></script>
+  </head>
+  <body>
+
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <a href="index.html" id="mobilelogo"><img src="images/logo/logo-remcu-mobile.png" srcset="images/logo/logo-remcu-mobile.png 1x, images/logo/logo-remcu-2x-mobile.png 2x" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x-mobile.png" class="fusion-standard-logo"></a>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+  <!--  <a href="/"><img id="logo" src="/images/logo/logo-remcu.png" srcset="/images/logo/logo-remcu.png 1x, /images/logo/logo-remcu-2x.png 2x" width="290" height="60" style="max-height: 60px; height: 55px;" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x.png" class="fusion-standard-logo" data-logo-height="60" data-logo-width="290"></a>
+  -->
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a id="logoblock" href="index.html"><img src="images/logo/logo-remcu.png" srcset="images/logo/logo-remcu.png 1x, images/logo/logo-remcu-2x.png 2x" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x.png" class="fusion-standard-logo"></a>
+      </li>
+ <li class="nav-item">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+<!--
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Remote MCU lib</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="/remote-mcu-library/">Remote MCU library</a>
+          <a class="dropdown-item" href="/benefits">Benefits of library</a>
+          <a class="dropdown-item" href="/license">License</a>
+        </div>
+      </li>
+      -->
+        <li class="nav-item">
+            <a class="nav-link" href="benefits.html">Benefits</a>
+        </li>
+
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="tutorials.html#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Resources</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="tutorials.html">Tutorials</a>
+          <a class="dropdown-item" href="https://github.com/remotemcu/remcu_examples" target=“_blank” >Examples</a>
+          <!-- <a class="dropdown-item" href="/faq">FAQ</a> -->
+          <a class="dropdown-item" href="docs.html">Docs</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="news.html">News</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link navbar_latest_link" href="contact-us.html">Contact us</a>
+      </li>
+
+      <li class="nav-item download-button-item">
+        <a class="btn btn-lg btn-primary"  href="download.html">Download</a>
+      </li>
+
+
+    </ul>
+
+   
+
+  </div>
+</nav>
+ <nav class="displaynone navbar-fixed navbar-expand-lg navbar-dark bg-dark">
+
+
+
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a href="index.html" id="mobilelogo" style="float:right; margin-top: 5px;"><img id="logo" src="images/logo/logo-remcu-mobile.png" srcset="images/logo/logo-remcu-mobile.png 1x, images/logo/logo-remcu-2x-mobile.png 2x" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x-mobile.png" class="fusion-standard-logo"></a>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a id="logoblock" href="index.html"><img id="logo" src="images/logo/logo-remcu.png" srcset="images/logo/logo-remcu.png 1x, images/logo/logo-remcu-2x.png 2x" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x.png" class="fusion-standard-logo"></a>
+      </li>
+ <li class="nav-item">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+<!--
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Remote MCU lib</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="/remote-mcu-library/">Remote MCU library</a>
+          <a class="dropdown-item" href="/benefits">Benefits of library</a>
+          <a class="dropdown-item" href="/license">License</a>
+        </div>
+      </li>
+      -->
+        <li class="nav-item">
+            <a class="nav-link" href="benefits.html">Benefits</a>
+        </li>
+
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="tutorials.html#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Resources</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="tutorials.html">Tutorials</a>
+          <a class="dropdown-item" href="https://github.com/remotemcu/remcu_examples" target=“_blank” >Examples</a>
+          <!-- <a class="dropdown-item" href="/faq">FAQ</a> -->
+          <a class="dropdown-item" href="docs.html">Docs</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="news.html">News</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link navbar_latest_link" href="contact-us.html">Contact us</a>
+      </li>
+
+      <li class="nav-item download-button-item">
+        <a class="btn btn-lg btn-primary"  href="download.html">Download</a>
+      </li>
+    </ul>
+
+   
+
+  </div>
+</nav>
+
+<!-- Carousel start -->
+
+<!-- Carousel end -->
+
+<!-- Main content block start -->
+
+ 
+<section id="primary" class="content-area bg-light ">
+		<main id="main">
+
+		<!--
+
+			<header class="page-header">
+				<h1 class="page-title text-center">
+					List of REMCU Tutorial
+				</h1>
+			</header>
+		-->
+
+			<article class="article2 pt-3 px-3 pt-md-5 px-md-5 mx-auto overflow-hidden my-3 p-3">
+				<header class="entry-header text-center">
+					<h2 class="entry-title mb-3">List of REMCU Tutorial</h2>
+				</header><!-- .entry-header -->
+
+
+				<div class="entry-content">
+  <!-- wp:paragraph -->
+<p>These tutorials are designed to get you up and running with REMCU Lib in no time.</p>
+<h4>Video Tutorial:</h4>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><li><a href="news/raspberry-pi-video-tutorial/index.html">Raspberry &amp; STM32F103 Video Tutorial </a>- A video tutorial on how to use the REMCU Lib on a Raspberry Pi embedded computer. As you know, Raspberry Pi doesn't have native ADC, DAC, CAN Bus controller and other low-level peripherals found in most modern microcontrollers(MCU), such as STM32, Arduino Due, Teensy dev board... So Let's fix it! Without using regular I2C and SPI modules like MCP3008, MCP2515 and others MCPXXXX modules.  <br>
+The  video  shows how to easily expand hardware of a Raspberry Pi board using one dollar STM32 microcontroller and some wires. User space C++ applications and Python scripts ran on the Raspberry will gain access to internal STM32F103 peripheral modules like DAC, ADC, GPIO and others as if these peripherals were a part of Raspberry chip without having to develop a microcontroller firmware and kernel drivers. <br>For your convenience, we prepared a Raspbian (the "Stretch" version) image. <a href="https://remotemcu.com//images/2020-05-27-raspberry-remcu.zip">Download</a>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JdBabbC5Prk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>&gt;</li></ul>
+<!-- /wp:list -->
+<!-- wp:list -->
+<ul><li><a href="news/stm32f4discovery-windows-tutorial/index.html">STM32F4Discovery Windows Tutorial</a>  - A video tutorial on how to use the REMCU Lib on Windows OS. It  demonstrates how to build and run C++ examples. There is running a GUI  app that communicates with on-board MEMS accelerometer (STM32F4Discovery  board) and builds acceleration graph, as well as a CAN Bus sniffer  application and also conducting amazing experiments with STM32F407 hardware using Python and Jupyter Notebook.
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iuPJtNPQ9iA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</li></ul>
+<!-- /wp:list -->
+<!-- wp:list -->
+<ul><li><a href="news/stm32f4discovery-tutorial-for-unix-like-os-macos-linux/index.html">STM32F4Discovery Tutorial for Unix-like OS (MacOS, Linux)</a>  - A video tutorial on how to use the REMCU Lib on Unix-like OS  (MacOS/Linux). It shows building and running app that captures and plots  acceleration of on-board MEMS sensor (STM32F4Discovery board) and also  conducting amazing experiments with STM32F407  hardware using a C++  interpreter  and Jupyter Notebook. The tutorial is based on MacOS, for  Ubuntu and other Linux OS there is the same sequence of actions.
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iuofdoWWkC4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</li></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+				</div><!-- .entry-content -->
+
+				<footer class="entry-footer">
+				</footer><!-- .entry-footer -->
+			</article><!-- #post-${ID} -->
+
+
+
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+
+<!-- Main content block end -->
+
+<footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+        <small class="d-block mb-3 text-muted">Copyright &copy; 2020<br>All Rights Reserved. </small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>RMCU lib</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="tutorials.html#">Benefits of library</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="dropdown-item" href="https://remotemcu.com/tutorial">Tutorial</a></li>
+          <li><a class="dropdown-item" href="https://github.com/remotemcu/remcu_examples" target=“_blank” >Examples</a></li>
+          <li><a class="dropdown-item" href="docs.html">Docs</a></li>
+        </ul>
+      </div>
+  
+      <div class="col-6 col-md" style="margin-right: 20px">
+        <h5>General contact:</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="tutorials.html#">info@remotemcu.com</a></li>
+        </ul>
+        <h5>Tech support:</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="tutorials.html#">support@remotemcu.com</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md" style="min-width: 250px !important;">
+        <h5>Follow us</h5>
+      <a class="social_icon" target="_blank" href="https://www.facebook.com/remotemcu/"><img src="images/social_networks_logos/facebook.png" alt="Facebook"></a>
+      <a class="social_icon" target="_blank" href="https://twitter.com/RemoteMcu"><img src="images/social_networks_logos/twitter.png" alt="Twitter"></a>
+      <a class="social_icon" target="_blank" href="https://www.linkedin.com/company/remotemcu"><img src="images/social_networks_logos/linkedin.png" alt="LinkedIn"></a>
+      <!--<a class="social_icon" target="_blank" href="https://www.hackster.io/remotemcu"><img src="/images/social_networks_logos/hackster.png" alt="Hackster"></a>
+	-->
+      <a class="social_icon" target="_blank" href="https://github.com/remotemcu/"><img src="images/social_networks_logos/github.png" alt="Github"></a>
+      <a class="social_icon" target="_blank" href="https://www.youtube.com/channel/UCyIDHcMnHFFRS-SznKUZ9ug"><img src="images/social_networks_logos/youtube.png" alt="Youtube"></a>
+      </div>
+  
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+<script>
+  $(window).scroll(function(){
+  var menu = $('.navbar'),
+      logo = $('#logo'),
+      scroll = $(window).scrollTop(),
+      menu_fixed = $('.navbar-fixed')
+  ;
+  
+  if (scroll >= 400) {
+      menu_fixed.fadeIn();
+  }
+  else {
+      menu_fixed.fadeOut();
+  }
+  
+});
+</script>
+
+
+ 
+    </body>
+</html>
+

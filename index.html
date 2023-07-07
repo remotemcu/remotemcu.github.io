@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159666078-1"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'UA-159666078-1');
+ </script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.com/metrika/tag.js", "ym");
+ 
+    ym(59071672, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.com/watch/59071672" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+
+    <title>RemoteMCU</title>
+    
+<meta name="format-detection" content="telephone=no">
+
+<meta name="title" content="Main - RemoteMCU Project">
+<meta name="description" content="The REMCU Lib is a cross-platform library designed for remote access to internal peripherals of various MCUs and SoCs as if these peripherals were a part of your computer.">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="index.html" />
+
+<script type="application/ld+json">{"@context" : "https://schema.org","@type" : "Organization","logo": "https:\/\/remotemcu.com\/images\/logo\/logo_preview.png","name" : "RemoteMCU","url" : "https:\/\/remotemcu.com\/news","sameAs" : ["https:\/\/www.facebook.com\/remotemcu\/", "https:\/\/twitter.com\/@RemoteMcu", "https:\/\/www.youtube.com\/channel\/UCyIDHcMnHFFRS-SznKUZ9ug", "https:\/\/www.linkedin.com\/company\/remotemcu"]}</script>
+<meta property="og:url" content="https://remotemcu.com/" />
+<meta property="og:site_name" content="RemoteMCU" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="RemoteMCU Project  is a new approach of controlling various MCU and SoC from PC or embedded computer" />
+<meta property="og:description" content="The REMCU Lib is a cross-platform library designed for remote access to internal peripherals of various MCUs and SoCs as if these peripherals were a part of your computer" />
+<meta property="og:image" content="https://remotemcu.com/images/logo/logo_preview.png" />
+<meta property="og:image:secure_url" content="https://remotemcu.com/images/logo/logo_preview.png" />
+<meta property="fb:pages" content="100628564742383" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@RemoteMcu" />
+<meta name="twitter:creator" content="@RemoteMcu" />
+<meta name="twitter:title" content="RemoteMCU Project  is a new approach of controlling various MCU and SoC from PC or embedded computer" />
+<meta name="twitter:description" content="The REMCU Lib is a cross-platform library designed for remote access to internal peripherals of various MCUs and SoCs as if these peripherals were a part of your computer" />
+<meta name="twitter:image:src" content="https://remotemcu.com/images/logo/logo_preview.png" />
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-favicon.png"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/product/product.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+
+     
+         <link rel="stylesheet" href="css/fuzzycomplete.min.css">
+    <link href="css/contacts.css" rel="stylesheet">
+
+<style>
+.w-80 {
+  width: 80%
+}
+
+.w-50 {
+    width: 50%
+}
+
+
+.video {position:relative;padding-bottom:56.25%;//padding-top:25px;height:0;}
+
+.video iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
+
+.news-anonce {
+    display: table-cell;
+    padding-left: 15px;
+    vertical-align: middle;
+}
+
+#gobutton, #searchbutton {
+    margin-left: 5px;
+}
+
+#archform, #search-row {
+    margin-left: 15px;
+}
+
+#search-row {
+    margin-right: 15px;
+}
+
+.form-wrap {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sendrequest {
+    padding-left: 20px;
+}
+
+@media (max-width: 760px) {
+    .form-wrap {
+        width: 100%;
+    }
+}
+
+</style>
+
+
+    <script src="js/cookie.notice.min.js"></script>
+  </head>
+  <body>
+
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <a href="index.html" id="mobilelogo"><img src="images/logo/logo-remcu-mobile.png" srcset="images/logo/logo-remcu-mobile.png 1x, images/logo/logo-remcu-2x-mobile.png 2x" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x-mobile.png" class="fusion-standard-logo"></a>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+  <!--  <a href="/"><img id="logo" src="/images/logo/logo-remcu.png" srcset="/images/logo/logo-remcu.png 1x, /images/logo/logo-remcu-2x.png 2x" width="290" height="60" style="max-height: 60px; height: 55px;" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x.png" class="fusion-standard-logo" data-logo-height="60" data-logo-width="290"></a>
+  -->
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a id="logoblock" href="index.html"><img src="images/logo/logo-remcu.png" srcset="images/logo/logo-remcu.png 1x, images/logo/logo-remcu-2x.png 2x" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x.png" class="fusion-standard-logo"></a>
+      </li>
+ <li class="nav-item">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+<!--
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Remote MCU lib</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="/remote-mcu-library/">Remote MCU library</a>
+          <a class="dropdown-item" href="/benefits">Benefits of library</a>
+          <a class="dropdown-item" href="/license">License</a>
+        </div>
+      </li>
+      -->
+        <li class="nav-item">
+            <a class="nav-link" href="benefits.html">Benefits</a>
+        </li>
+
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Resources</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="tutorials.html">Tutorials</a>
+          <a class="dropdown-item" href="https://github.com/remotemcu/remcu_examples" target=“_blank” >Examples</a>
+          <!-- <a class="dropdown-item" href="/faq">FAQ</a> -->
+          <a class="dropdown-item" href="docs.html">Docs</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="news.html">News</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link navbar_latest_link" href="contact-us.html">Contact us</a>
+      </li>
+
+      <li class="nav-item download-button-item">
+        <a class="btn btn-lg btn-primary"  href="download.html">Download</a>
+      </li>
+
+
+    </ul>
+
+   
+
+  </div>
+</nav>
+ <nav class="displaynone navbar-fixed navbar-expand-lg navbar-dark bg-dark">
+
+
+
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a href="index.html" id="mobilelogo" style="float:right; margin-top: 5px;"><img id="logo" src="images/logo/logo-remcu-mobile.png" srcset="images/logo/logo-remcu-mobile.png 1x, images/logo/logo-remcu-2x-mobile.png 2x" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x-mobile.png" class="fusion-standard-logo"></a>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a id="logoblock" href="index.html"><img id="logo" src="images/logo/logo-remcu.png" srcset="images/logo/logo-remcu.png 1x, images/logo/logo-remcu-2x.png 2x" alt="REMCU lib Logo" retina_logo_url="/images/logo/logo-remcu-2x.png" class="fusion-standard-logo"></a>
+      </li>
+ <li class="nav-item">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+<!--
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Remote MCU lib</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="/remote-mcu-library/">Remote MCU library</a>
+          <a class="dropdown-item" href="/benefits">Benefits of library</a>
+          <a class="dropdown-item" href="/license">License</a>
+        </div>
+      </li>
+      -->
+        <li class="nav-item">
+            <a class="nav-link" href="benefits.html">Benefits</a>
+        </li>
+
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Resources</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="tutorials.html">Tutorials</a>
+          <a class="dropdown-item" href="https://github.com/remotemcu/remcu_examples" target=“_blank” >Examples</a>
+          <!-- <a class="dropdown-item" href="/faq">FAQ</a> -->
+          <a class="dropdown-item" href="docs.html">Docs</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="news.html">News</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link navbar_latest_link" href="contact-us.html">Contact us</a>
+      </li>
+
+      <li class="nav-item download-button-item">
+        <a class="btn btn-lg btn-primary"  href="download.html">Download</a>
+      </li>
+    </ul>
+
+   
+
+  </div>
+</nav>
+
+<!-- Carousel start -->
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!--  <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol> -->
+    <div class="carousel-inner">
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+        <div class="container ">
+        <div class="carousel-caption">
+
+            <h1>Please Try the Examples and Video Tutorial</h1>
+              <div class="video-wrap" style="max-width: 500px;margin-left:auto; margin-right:auto;">
+              <video muted="" playsinline="" autoplay="" style=" object-fit: cover; background-size: cover; width: 100%; transition: none 0s ease 0s; text-align: center; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 400; font-size: 12px; display: block; visibility: inherit; opacity: 1;" class="" loop="" preload="auto"><source src="https://github.com/remculib/site/blob/master/banner/example.mp4?raw=true" type="video/mp4" style="transition: none 0s ease 0s; text-align: inherit; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 400; font-size: 13px;"></video>
+              </div>
+              <br>
+              <a class="btn btn-lg btn-primary" href="https://github.com/remotemcu/remcu_examples" role="button" style="margin-top: 10px; background-color:#7f8cbd; border-color: transparent;" target=“_blank” >Go to GitHub</a>
+
+          
+        </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+        <div class="container ">
+          <div class="carousel-caption">
+           <h1>The work with PC Tool</h1>
+
+              <img src="https://raw.githubusercontent.com/remculib/site/master/banner/interpreter.png" width="100%">
+
+              <p>
+You can use the REMCU lib with C++ interpreter, Python and other interpreters that makes it very easy to сonduct amazing experiments on chip peripherals and MCU-based devices. It saves a lot of time that is usually spent on development of test firmware and helps to learn how to use new peripheral blocks of MCU or SoC quicker. Instead of waiting for firmware to rebuild, then download, all you have to do is run your snippet code, with no zero down-time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+        <div class="container ">
+          <div class="carousel-caption">
+            <h1>Interactive work</h1>
+
+            <div class="video-wrap" style="max-width: 700px;margin-left:auto; margin-right:auto;max-height: 300px;">
+              <video muted="" playsinline="" autoplay="" style=" object-fit: cover; background-size: cover; width: 100%; transition: none 0s ease 0s; text-align: center; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 400; font-size: 12px; display: block; visibility: inherit; opacity: 1;" class="" loop="" preload="auto"><source src="https://github.com/remculib/site/raw/master/banner/jupyter-promt-crop.mp4?raw=true" type="video/mp4" style="transition: none 0s ease 0s; text-align: inherit; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 400; font-size: 13px;"></video>
+            </div>
+            
+
+            <p style="margin-top: 5px;">REMCU Lib makes it easier to research behaviour of a MCU-based device when you have its response in real-time using the interactive Jupyter Notebook environment. 
+If you want to code for a few minutes, you just fire up Jupyter IDE and start coding for your device without the headaches of learning microcontroller vendor specific tools.
+</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+        <div class="container ">
+          <div class="carousel-caption">
+            <h1>Peripheral expansion</h1>
+
+            <img src="https://github.com/remculib/site/blob/master/banner/Linux_board.png?raw=true" width="100%" style="max-width: 600px;">
+
+            <p>
+             The REMCU Library can be thought of as a bridge that links your embedded computer with low-level MCU/SoC’s peripherals such as GPIO, analog input, CAN Bus, PWM, LCD controller, etc without having to develop firmware, kernel drivers and other additional software.
+             </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+        <div class="container ">
+          <div class="carousel-caption">
+            <h1>Cross-Platform</h1>
+
+            <img src="https://github.com/remculib/site/blob/master/banner/OS.png?raw=true" width="100%">
+
+            <p>REMCU lib is a cross-platform tool and works on all most common desktop operating systems. It can also be ported to the embedded systems.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+        <div class="container ">
+          <div class="carousel-caption">
+            <h1>Wide-ranging list of devices</h1>
+
+            <img src="https://github.com/remculib/site/blob/master/banner/MCUs.PNG?raw=true" width="100%">
+
+            <p>REMCU Lib by nature works with many different types of chips, including 8-bit, 16-bit, 32-bit MCUs and even 64-bit systems of chips.</p>
+
+          </div>
+        </div>
+      </div>
+
+<!--- End of Carousel items -->
+
+    </div>
+    <a class="carousel-control-prev" href="index.html#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="index.html#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<!-- Carousel end -->
+
+<!-- Main content block start -->
+
+ <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+   <!-- block 1 start -->
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 overflow-hidden">
+    <div class="my-3 py-3" style="color: black">
+      <h2 class="display-5">About REMCU Lib</h2><br>
+
+        <p style="text-align: left;"> The <b>REMCU Lib</b> is a state of the art approach that will transform embedded development in the same way that microcontrollers have transformed the electronics industry. 
+This solution combines the fun of embedded programming with the power of high level  languages, as well as all of the PC effective tools like <i>Jupyter Notebook, Matlab, etc</i>.<br> 
+<img class='img-fluid w-100' src="https://raw.githubusercontent.com/remculib/site/master/standart.png" alt="embedded programming" />
+<br>
+Usually, each change of firmware logic means uploading fresh C code onto a MCU device and resetting the device. With REMCU Lib we’re able to send new instructions without further uploads and resetting. We can dynamically reprogram our devices in real-time!
+<br>
+<img class='img-fluid w-100' src="https://raw.githubusercontent.com/remculib/site/master/forwarding.png" alt="embedded programming" />
+<br>
+The <b>REMCU Lib</b> is a cross-platform library designed for <a href="chip-peripheral-forwarding.html">Chip Peripheral Forwarding</a>. This is an enabling technology that allows to map internal peripherals of various MCUs or SoCs to your personal or embedded computer as if these peripherals were a part of the computer.
+The tool can be thought of as a bridge that links your PC/embedded computer with low-level MCU/SoC’s peripherals such as <i>GPIO, analog input, CAN Bus, PWM, LCD controller, etc</i> without having to develop specific firmware, kernel drivers and other additional software.
+Your user space program gives access to all peripherals of a tethered chip using driver functions of SDK provided by MCU/SoC vendors or 3rd parties. You use the driver functions how you do it in firmware code. The REMCU Lib remotely executes them without the difficulties of writing a load of boilerplate code to serialize and transport your objects and invoke remote methods. You can get right down to business.
+<br>
+<br> 
+Let's have a look at the video below and see what opportunities and applications it provides: 
+        </p>
+<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/PJPl9Y96hA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div> 
+
+    </div>
+
+
+<p>
+
+ <h5 class="display-5" style="color: black; text-align: left;" >Check your MCU chip:</h5>
+ <form action="download.html" method="post" id="archform">
+  <div class="row">
+    <div class="w-80">
+      <input name="arch" type="text" class="form-control mb-2" id="archPicker" placeholder="Type MCU name here..."  autocomplete="off">
+    </div>
+
+    <div id="go">
+      <button class="btn btn-primary mb-2" id="gobutton">Go</button>
+    </div>
+
+    <div class="displaynone" id="requestoffer" style="text-align: left;">
+      There are no public packages for this configuration for now. You can keep track of new available versions with any of the following:
+<br>
+<ul style="margin-top: 5px;">
+    <li><a href="https://twitter.com/RemoteMcu" target="_blank">Twitter</a></li>
+    <li><a href="https://www.facebook.com/remotemcu/" target="_blank">Facebook Page</a></li>
+    <li><a href="https://www.linkedin.com/company/remotemcu" target="_blank">Linkedin Page</a></li>
+    <li><a href="https://www.linkedin.com/company/remotemcu" target="_blank">Youtube Channel</a></li>
+</ul>
+You can <a href="index.html" onClick="showSendRequestForm(); return false;">send us a request</a> to get Extended version for this configuration.
+    </div>
+
+  </div>
+</form>
+
+<div id="sendrequest">
+<form id="sendrequestform" class="displaynone" style="margin-top: 30px;" action="https://remotemcu.com/sendrequest" method="post">
+
+    <div class="row"><h5>Request form</h5></div>
+
+    <div class="row special">
+        <div class="w-80">
+            <label>Your name:</label>
+            <input name="name" type="text" class="form-control mb-2" id="name" placeholder="">
+        </div>
+    </div>
+
+    <div class="row special">
+        <div class="w-80">
+            <label>Email:</label>
+            <input name="email" type="text" class="form-control mb-2" id="e-mail" placeholder="">
+        </div>
+    </div>
+
+    <div class="row special">
+        <div class="w-80">
+            <label>Message:</label>
+            <textarea name="desc" type="text" class="form-control mb-2" id="message" placeholder=""></textarea>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="w-80">
+            <label>Your name *</label>
+            <input name="n34skq0" type="text" class="form-control mb-2" placeholder="Name">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="w-80">
+            <label>Email *</label>
+            <input name="e4020kg" type="text" class="form-control mb-2" placeholder="your_email@company.com">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="w-80">
+            <label>Message (optional)</label>
+            <textarea name="m8492do0" type="text" class="form-control mb-2" placeholder=""></textarea>
+        </div>
+    </div>
+
+    <input type="hidden" name="t3104990" id="target" value="">
+
+    <div class="row">
+        <div id="go" class="mt-3">
+            <button  class="btn btn-primary mb-2 ml-0" id="sendrequestbutton">Send a request</button>
+        </div>
+    </div>
+
+
+
+</form>
+</div>
+
+
+  </p>
+
+
+  </div>
+  <!-- block 1 end -->
+
+
+<!-- block 2 start -->
+
+     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5  overflow-hidden">
+     <div class="my-3 py-3" style="padding-bottom: 0px !important; margin-bottom: 0px !important;">
+
+<div class="form-wrap">
+<form action="https://remotemcu.com/search" method="post">
+    <div>
+          <h2 class="display-5 text-center" style="margin-bottom: 30px;">Search on site</h2>
+    </div>
+  <div class="row" id="search-row">
+    <div style="width: calc(100% - 100px);">
+      <input name="query" type="text" class="form-control mb-2" id="search" placeholder="Type your query..."  autocomplete="on">
+    </div>
+
+    <div id="go">
+      <button class="btn btn-primary mb-2" id="searchbutton">Search</button>
+    </div>
+
+  </div>
+</form>
+</div>
+
+    <div class="my-3 p-3" style="padding-bottom: 0px !important; margin-bottom: 0px !important;" id="news-anonces-container">
+        <h2 class="display-5 text-center">News</h2>
+        <br />
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32l053-examples.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32l053-examples/index.html"><h5>STM32L053 examples</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">08/13/2020</span>
+                                                                            We have added the STM32L053 examples that could be useful to learning the STM32L0's peripherals. The... <a href="news/stm32l053-examples/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32f3discovery-examples.jpg">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32f3discovery-examples/index.html"><h5>STM32F3Discovery examples</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">07/15/2020</span>
+                                                                            They are QT GUI applications. The first example communicates with on-board (STM32F4Discovery board) ... <a href="news/stm32f3discovery-examples/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32l0x3-hall-and-ll-driver.jpg">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32l0x3-hall-and-ll-driver/index.html"><h5>STM32L0x3 HALL and LL driver</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">07/10/2020</span>
+                                                                            New community REMCU version for STM32L0x3 chips is available for download. This provides the HAL and... <a href="news/stm32l0x3-hall-and-ll-driver/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32f429-stm32f439-stm32f446-stm32f469-stm32f479.jpg">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32f429-stm32f439-stm32f446-stm32f469-stm32f479/index.html"><h5>STM32F429 / STM32F439 / STM32F446 / STM32F469 / STM32F479</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">06/19/2020</span>
+                                                                            New community version of REMCU is available for download. It provides the Standard Peripheral Librar... <a href="news/stm32f429-stm32f439-stm32f446-stm32f469-stm32f479/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32f334.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32f334/index.html"><h5>STM32F334</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">06/14/2020</span>
+                                                                            New community REMCU version for STM32F334 chips is available for download. This provides the Standar... <a href="news/stm32f334/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32f4-version-for-raspberry.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32f4-version-for-raspberry/index.html"><h5>STM32F4 version for Raspberry</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">06/09/2020</span>
+                                                                            REMCU STM32F407 version for Raspberry Pi have been added and is available for download!
+
+Go to https... <a href="news/stm32f4-version-for-raspberry/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32f30x.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32f30x/index.html"><h5>STM32F30X</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">06/05/2020</span>
+                                                                            New community REMCU version for STM32F30X chips is available for download. This provides the Standar... <a href="news/stm32f30x/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32-blue-pill.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32-blue-pill/index.html"><h5>STM32 Blue Pill</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">05/27/2020</span>
+                                                                            The famous and popular Blue Pill board with STM32F103C8T6 is in our GitHub examples now. There are h... <a href="news/stm32-blue-pill/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32f0-examples-on-github.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32f0-examples-on-github/index.html"><h5>STM32F0 examples on Github</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">05/25/2020</span>
+                                                                            We have added the STM32F0 examples that could be useful to learning the STM32F0's peripherals and ch... <a href="news/stm32f0-examples-on-github/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32f0-remcu-is-ready.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32f0-remcu-is-ready/index.html"><h5>STM32F0 REMCU is ready!</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">05/21/2020</span>
+                                                                            New community REMCU version for STM32F0 chips is available for download. This provides the Standard ... <a href="news/stm32f0-remcu-is-ready/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/remcu-version-for-stm32f2.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/remcu-version-for-stm32f2/index.html"><h5>REMCU Version for STM32F2</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">05/16/2020</span>
+                                                                            New community REMCU version for STM32F2 chip is available for download. This provides the Standard P... <a href="news/remcu-version-for-stm32f2/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+            <div class="container news-container" style="width: 95%; min-width: 345px;">
+            <div style="display: table;">
+                <div style="display: table-cell">
+                    <img src="images/preview/stm32l1-series-done.png">
+                </div>
+                <div class="news-anonce">
+                    <a href="news/stm32l1-series-done/index.html"><h5>STM32L1 series done</h5></a>
+                    <p> <span style="color: #808080; font-style: italic; font-weight: bold;">05/13/2020</span>
+                                                                            New community REMCU version for STM32L1 chip is available for download. This provides the Standard P... <a href="news/stm32l1-series-done/index.html">[Read_More]</a>
+                                            </p>
+                </div>
+            </div>
+            <br />
+        </div>
+        </div>
+
+         <br>
+
+  </div>
+  </div>
+
+    <!-- block 2 end -->
+</div>
+
+<!-- Main content block end -->
+
+<footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+        <small class="d-block mb-3 text-muted">Copyright &copy; 2020<br>All Rights Reserved. </small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>RMCU lib</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="index.html#">Benefits of library</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="dropdown-item" href="https://remotemcu.com/tutorial">Tutorial</a></li>
+          <li><a class="dropdown-item" href="https://github.com/remotemcu/remcu_examples" target=“_blank” >Examples</a></li>
+          <li><a class="dropdown-item" href="docs.html">Docs</a></li>
+        </ul>
+      </div>
+  
+      <div class="col-6 col-md" style="margin-right: 20px">
+        <h5>General contact:</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="index.html#">info@remotemcu.com</a></li>
+        </ul>
+        <h5>Tech support:</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="index.html#">support@remotemcu.com</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md" style="min-width: 250px !important;">
+        <h5>Follow us</h5>
+      <a class="social_icon" target="_blank" href="https://www.facebook.com/remotemcu/"><img src="images/social_networks_logos/facebook.png" alt="Facebook"></a>
+      <a class="social_icon" target="_blank" href="https://twitter.com/RemoteMcu"><img src="images/social_networks_logos/twitter.png" alt="Twitter"></a>
+      <a class="social_icon" target="_blank" href="https://www.linkedin.com/company/remotemcu"><img src="images/social_networks_logos/linkedin.png" alt="LinkedIn"></a>
+      <!--<a class="social_icon" target="_blank" href="https://www.hackster.io/remotemcu"><img src="/images/social_networks_logos/hackster.png" alt="Hackster"></a>
+	-->
+      <a class="social_icon" target="_blank" href="https://github.com/remotemcu/"><img src="images/social_networks_logos/github.png" alt="Github"></a>
+      <a class="social_icon" target="_blank" href="https://www.youtube.com/channel/UCyIDHcMnHFFRS-SznKUZ9ug"><img src="images/social_networks_logos/youtube.png" alt="Youtube"></a>
+      </div>
+  
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+<script>
+  $(window).scroll(function(){
+  var menu = $('.navbar'),
+      logo = $('#logo'),
+      scroll = $(window).scrollTop(),
+      menu_fixed = $('.navbar-fixed')
+  ;
+  
+  if (scroll >= 400) {
+      menu_fixed.fadeIn();
+  }
+  else {
+      menu_fixed.fadeOut();
+  }
+  
+});
+</script>
+
+
+     <script src="js/fuse/fuse.min.js" type="text/javascript"></script>
+    <script src="js/fuse/fuzzycomplete.js" type="text/javascript"></script>
+
+    <script>
+        function showRequestOffer(){
+             $('#requestoffer').removeClass('displaynone');
+             $('#searched-text').text($("#archPicker").val());
+             $('#target').val($("#archPicker").val());
+        }
+
+        function showSendRequestForm(){
+            $('#sendrequestform').removeClass('displaynone');
+            $('#sendrequestform').show();
+        }
+
+        function ContainsKeyValue( obj, key, value ){
+            if( obj[key] === value ) return true;
+            for( all in obj )
+            {
+                if( obj[all] != null && obj[all][key] === value ){
+                    return true;
+                }
+                if( typeof obj[all] == "object" && obj[all]!= null ){
+                    var found = ContainsKeyValue( obj[all], key, value );
+                    if( found == true ) return true;
+                }
+            }
+            return false;
+        }
+
+        function sendQueryToServer(query, found){
+            $.ajax({
+                type: 'POST',
+                // make sure you respect the same origin policy with this url:
+                // http://en.wikipedia.org/wiki/Same_origin_policy
+                url: '/ajax/querymanager',
+                data: {
+                    'query': query,
+                    'found': found
+                },
+        //        success: function(msg){
+        //            alert('wow' + msg);
+        //        }
+            });
+        }
+
+
+        function getArchsCallback(data){
+                  var archs = data;
+
+
+                  var checkArchGo = function (e) {
+
+                  var val = $("#archPicker").val();
+
+                  if(ContainsKeyValue(archs, 'arch', val)) {
+                      // if string found in archlist, send to server and submit
+                      sendQueryToServer(val, 1);
+                      document.getElementById('archform').submit();
+                  }
+                  else {
+                      // if string not found in archlist, send to server and show request offer
+                      sendQueryToServer(val, 0);
+                      showRequestOffer();
+                  }
+
+                  return false;
+                }
+
+                window.checkArch = function (e) {
+
+                  var val = $("#archPicker").val();
+
+                  if(ContainsKeyValue(archs, 'arch', val)) {
+                      sendQueryToServer(val, 1);
+                    //  document.getElementById('archform').submit();
+                  }
+                  else {
+                      sendQueryToServer(val, 0);
+                      showRequestOffer();
+                  }
+
+                  return false;
+                }        
+
+                $("#archPicker").keydown(function(e) {
+                    if(e.which == 13 || e.which == 9) {
+                        var val0 = $("#archPicker").val()
+
+                        setTimeout(function(){
+                                var val1 = $("#archPicker").val()
+
+                                if ( val1 == '') {
+                                      var val = val0
+                                  }
+                                else {
+                                      var val = val1
+                                }
+
+
+
+                                if(ContainsKeyValue(archs, 'arch', val)) {
+                                    sendQueryToServer(val, 1);
+                                    document.getElementById('archform').submit();
+                                }
+                                else {
+                                    sendQueryToServer(val, 0);
+                                    showRequestOffer();
+                                }
+
+
+
+                            }, 500);
+
+                    }
+
+                    if(e.which == 38 || e.which == 40) {
+                        setTimeout(function(){
+                            if($("#archPicker").val() == ''){
+                                $("#archPicker").val($(".selected").text());
+                            }
+                        }, 500);
+
+                    }
+                });
+
+                document.getElementById("gobutton").onclick = checkArchGo;
+
+                var fuseOptions = { keys: ["arch", "comment"] };
+
+                var options = { display: function(result) { return "<b>" + result['arch'] + "</b> - " + result['comment']; }, displayValue: "arch",key: "arch", fuseOptions: fuseOptions, resultsLimit: 20 };
+
+                $("#archPicker").fuzzyComplete(archs, options);
+                
+        }
+
+        function hideBlock(i){
+            $('.news-container').eq(i-1).css("display", "none");
+        }
+
+        function showBlock(i){
+            $('.news-container').eq(i-1).css("display", "block");
+        }
+
+        function newsConterollerCallback(){
+            var winwidth = $(window).width();
+
+            if(winwidth < 1430){
+                hideBlock(8);
+                hideBlock(9);
+                hideBlock(10);
+                hideBlock(11);
+                hideBlock(12);
+            }
+            else if(winwidth >= 1430 && winwidth < 1750){
+                showBlock(8);
+                showBlock(9);
+                showBlock(10);
+                hideBlock(11);
+                hideBlock(12);
+            }
+            else if(winwidth >=1750 && winwidth < 2360){
+                showBlock(8);
+                showBlock(9);
+                showBlock(10);
+                hideBlock(11);
+                hideBlock(12);
+            }
+            else if(winwidth >=2360){
+                showBlock(8);
+                showBlock(9);
+                showBlock(10);
+                showBlock(11);
+                showBlock(12);
+            }
+        }
+
+        $(document).ready(function(){
+        newsConterollerCallback();
+
+        $.getJSON("/ajax/getarchs").done(getArchsCallback).fail(function(){
+            $.getJSON("/ajax/getarchs").done(getArchsCallback).fail(function(){
+                $.getJSON("/ajax/getarchs").done(getArchsCallback).fail(function(){
+                    alert( "Error server connection, please write on email support@remotemcu.com" );
+                });
+            });
+        });
+
+        $( window ).resize(newsConterollerCallback);
+
+        });
+    </script>
+
+    </body>
+</html>
+
