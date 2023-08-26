@@ -236,13 +236,13 @@ Usually, the code running on the computer and the embedded firmware are written 
 <img src="https://raw.githubusercontent.com/remculib/site/master/post/forwarding/common_approach.PNG" alt="PC &amp; MCU" title="PC &amp; MCU" />
 A Chip Peripheral Forwarding(CPF) was born out of the desire to make working with custom electronics significantly simpler, faster, and cheaper. The CPF is an enabling technology that allows to map internal peripherals of various MCUs or SoCs to your PC as if these peripherals were a part of the computer.
 <img src="https://raw.githubusercontent.com/remculib/site/master/post/forwarding/cpu_access.PNG" alt="CPU access to MCU&#039;s peripherals" title="CPU access to MCU&#039;s peripherals" />
-There is a straightforward tool that makes it easier to do it and to avoid writing additional code. <a href="index.html" title="REMCU Lib"><strong>REMCU Lib</strong></a> can be thought of as a bridge that links your computer with low-level MCU/SoC�s peripherals such as GPIO, analog input, CAN Bus, PWM, LCD controller, etc without having to develop specific firmware, OS drivers and other additional software.
+There is a straightforward tool that makes it easier to do it and to avoid writing additional code. <a href="index.html" title="REMCU Lib"><strong>REMCU Lib</strong></a> can be thought of as a bridge that links your computer with low-level MCU/SoC's peripherals such as GPIO, analog input, CAN Bus, PWM, LCD controller, etc without having to develop specific firmware, OS drivers and other additional software.
 <img src="https://raw.githubusercontent.com/remculib/site/master/post/forwarding/compare_cpf_old.png" alt="compare MCU introduction with PC" title="compare MCU introduction with PC" />
-You program gives access to all peripherals of a tethered chip using driver functions of SDK provided by MCU/SoC vendors or 3rd parties. You use the driver functions how you do it in firmware code. The REMCU Lib remotely executes them without the difficulties of writing a load of boilerplate code to serialize and transport your objects and invoke remote methods.  Thereby a developer doesn�t need to learn new tools but can just get right down to business.
+You program gives access to all peripherals of a tethered chip using driver functions of SDK provided by MCU/SoC vendors or 3rd parties. You use the driver functions how you do it in firmware code. The REMCU Lib remotely executes them without the difficulties of writing a load of boilerplate code to serialize and transport your objects and invoke remote methods.  Thereby a developer doesn't need to learn new tools but can just get right down to business.
 <img src="https://raw.githubusercontent.com/remculib/site/master/post/forwarding/app_access.PNG" alt="Python C C++ acess to periperals" title="Python C C++ acess to periperals" />
 This approach provides a way to harness the work directly with chip's peripherals  on our power PC while applying high-level languages(Python, Java, C# etc), frameworks/library(Qt, Boost etc.) and effective tools like  Jupyter Notebook, Matlab, etc.
 The interactive Jupyter Notebook or Python makes it easier to research behaviour of a MCU device, providing you have the option of working with it interactively and watch its response in real-time.
-If before, each change of firmware logic means uploading fresh C code onto a MCU device and resetting the device. With REMCU Lib we�re able to send new instructions without further uploads and resetting. Now we can dynamically reprogram our devices in real-time!
+If before, each change of firmware logic means uploading fresh C code onto a MCU device and resetting the device. With REMCU Lib we're able to send new instructions without further uploads and resetting. Now we can dynamically reprogram our devices in real-time!
 These video demonstrates it:</p>
 <p>For <strong>Windows OS</strong>:  </p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iuPJtNPQ9iA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -283,7 +283,7 @@ You can find the REMCU examples on GitHub: <a href="https://github.com/remotemcu
         <h5>Resources</h5>
         <ul class="list-unstyled text-small">
           <li><a class="dropdown-item" href="https://remotemcu.com/tutorial">Tutorial</a></li>
-          <li><a class="dropdown-item" href="https://github.com/remotemcu/remcu_examples" target=“_blank” >Examples</a></li>
+          <li><a class="dropdown-item" href="https://github.com/remotemcu/remcu_examples" target=â_blankâ >Examples</a></li>
           <li><a class="dropdown-item" href="docs.html">Docs</a></li>
         </ul>
       </div>
